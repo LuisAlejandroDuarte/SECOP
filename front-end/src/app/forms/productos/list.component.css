@@ -1,0 +1,17 @@
+.material-datatables {
+  padding: 1%;
+}
+
+.toolbar2 {
+  float: left;
+}
+
+.pull-left {
+  text-align: left !important;
+}
+
+span {
+    font-family: Roboto;
+    font-size:1.2rem;
+
+}

@@ -1,0 +1,54 @@
+
+<div class="container">
+  <div style="display: block;">
+    <div style="display:inline-block;">
+      <h3>DETALLE PRODUCTO</h3>
+    </div>
+  </div>
+
+<div class="bordes">
+  <table width="100%" >
+    <tr>
+      <td rowspan="5" style="width:50%">
+        <img [src]="imagen" alt="Girl in a jacket" width="100%" height="300px">
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <span style="font-weight: bold;font-size: 15px;">Nombre de producto</span>
+          <p>
+            {{nombre}}
+          </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span  style="font-weight: bold;font-size: 15px;">Descripción</span>
+        <p>
+          {{descripcion}}
+        </p>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <span  style="font-weight: bold;font-size: 15px;">Precio</span>
+        <p>
+          {{precio | number}}
+        </p>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <button mat-raised-button color="primary" (click)="onAddCar()">Agregar al carro</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="accent" (click)="onSalir()">Cancelar</button>
+      </td>
+
+    </tr>
+</table>
+
+</div>
+
+</div>
+

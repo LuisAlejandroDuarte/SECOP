@@ -1,0 +1,36 @@
+<div class="container ">
+  <div class="example-card">
+  <mat-card *ngFor="let item of items" >
+    <mat-card-title-group>
+      <mat-card-title>{{item.nombre}}</mat-card-title>
+      <mat-card-subtitle>{{item.descripcion}}</mat-card-subtitle><br/>
+
+
+    </mat-card-title-group>
+    <mat-card-content>
+      <div style="margin-bottom: 10px;font-weight: bold;font-size:1.0rem">{{item.precio | number}}</div>
+      <div class="button-container">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" (click)="onAddCar(item)">
+          <mat-icon>add</mat-icon>
+        </button>
+
+        <span>{{item.cantidad}}</span>
+        <button mat-mini-fab style="color:white;background-color: red;" aria-label="Example icon button with a menu icon"  (click)="onDeleteCar(item)">
+          <mat-icon>remove</mat-icon>
+        </button>
+      </div>
+      <div style="float:right">
+        <img mat-card-sm-image [src]="pathImagen + item.imagen"  style="margin-top:-100px">
+        <label>{{item.precio * item.cantidad | number}}  </label>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  </div>
+  <div>
+  <label style="margin-top:30px;font-size: 1.2rem;font-weight: bold;">Total: {{total() | number}}</label>
+  </div>
+  <div style="margin-left: 100%;">
+    <button mat-raised-button color="accent" (click)="onSalir()">Salir</button>
+  </div>
+
+</div>
